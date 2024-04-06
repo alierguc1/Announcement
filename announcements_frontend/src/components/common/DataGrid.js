@@ -9,6 +9,9 @@ import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+
 
 const columns = [
   { field: 'id', headerName: 'ID',width: 300 },
@@ -20,9 +23,31 @@ const columns = [
 
 
 const DataTable= () => {
+  function openAlert(isCorrect){
+    setOpen(true);
+    if(isCorrect == true){
+      setAlertMessage('Annouchment Adding...')
+      setAlertSeverity('success')
+    }else{
+      setAlertMessage('Annouchment Not Adding...')
+      setAlertSeverity('error')
+    }
+  }
+  const [alertMessage, setAlertMessage] = useState([])
+  const [alertSeverity, setAlertSeverity] = useState([])
+  const [open, setOpen] = React.useState(false);
   const [tableData, setTableData] = useState([])
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
 
   useEffect(() => {
     axios.get('https://localhost:44324/api/announcements')
@@ -30,13 +55,20 @@ const DataTable= () => {
   }, [])
 
     const addAnnouchments = () => {
+    if(title == '' || content == ''){
+      openAlert(false);
+    }else{
       axios.post("https://localhost:44324/api/announcements", {
         title: title,
         content: content
       })
       .then((response) => {
-        console.log("EKLEME ISLEMI : "+JSON.stringify(response));
+          openAlert(true); 
+          axios.get('https://localhost:44324/api/announcements')
+          .then(response =>  setTableData(response.data))    
       });
+    }
+
     };
 
     const handleTitleTextFieldChange = (event) => {
@@ -82,6 +114,17 @@ const DataTable= () => {
         columns={columns}
         pageSize={12}
       />
+    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity={alertSeverity}
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {alertMessage}
+        </Alert>
+      </Snackbar>
+      
     </div>
   )
 }
