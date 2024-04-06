@@ -9,13 +9,7 @@ const columns = [
 ]
 
 
-function getData(){
-  axios.get('https://localhost:44324/api/announcements')
-        .then(response => console.log("AXIOS DATA : "+JSON.stringify(response.data)));
-}
-
 const DataTable= () => {
-  getData();
   const [tableData, setTableData] = useState([])
 
   useEffect(() => {
