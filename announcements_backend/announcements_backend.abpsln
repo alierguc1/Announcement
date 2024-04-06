@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "announcements_backend": {
+      "path": "announcements_backend.abpmdl"
+    }
+  }
+}
