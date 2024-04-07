@@ -1,5 +1,4 @@
-﻿using AnnouncementAPI.Announcements.Dto;
-using AnnouncementAPI.Entities;
+﻿using AnnouncementAPI.Entities;
 using AnnouncementAPI.Entities.Dto;
 using AnnouncementAPI.EntityFrameworkCore;
 using AnnouncementAPI.Repositories.Interface;
