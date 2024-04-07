@@ -30,7 +30,7 @@ namespace AnnouncementAPI.Repositories.Concrete
             var Annouchement = ObjectMapper.Map<AddAnnouchment, Annouchment>(addAnnouchment);
             _appContext.Annouchments.Add(Annouchement);
             _appContext.SaveChanges();
-            _cacheService.AddToList<Annouchment>("Data", Annouchement);
+            _cacheService.AddToList<Annouchment>("AnnouncementData", Annouchement);
             return Annouchement;
         }
 
@@ -44,7 +44,7 @@ namespace AnnouncementAPI.Repositories.Concrete
 
         public List<Annouchment> GetAllAnnouchment()
         {
-            var getCache = _cacheService.GetFromList<Annouchment>("Data");
+            var getCache = _cacheService.GetFromList<Annouchment>("AnnouncementData");
             if (getCache.Count > 0)
             {
                 var yesterday = DateTime.Today.AddDays(-1);

@@ -6,6 +6,8 @@ using AnnouncementAPI.Repositories.Concrete;
 using AnnouncementAPI.Utils.RedisBuilder.Concrete;
 using StackExchange.Redis;
 using AnnouncementAPI.Mapping;
+using Volo.Abp.BackgroundWorkers;
+using Volo.Abp.Caching.StackExchangeRedis;
 
 namespace AnnouncementAPI;
 
@@ -13,6 +15,8 @@ namespace AnnouncementAPI;
     typeof(AnnouncementAPIDomainModule),
     typeof(AnnouncementAPIApplicationContractsModule),
     typeof(AbpDddApplicationModule),
+    typeof(AbpBackgroundWorkersModule),
+    typeof(AbpCachingStackExchangeRedisModule),
     typeof(AbpAutoMapperModule)
     )]
 public class AnnouncementAPIApplicationModule : AbpModule
