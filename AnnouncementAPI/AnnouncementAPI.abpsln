@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "AnnouncementAPI": {
+      "path": "AnnouncementAPI.abpmdl"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "AnnouncementAPI.Domain.Shared": {
+      "path": "src/AnnouncementAPI.Domain.Shared/AnnouncementAPI.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.Domain": {
+      "path": "src/AnnouncementAPI.Domain/AnnouncementAPI.Domain.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.Application.Contracts": {
+      "path": "src/AnnouncementAPI.Application.Contracts/AnnouncementAPI.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.Application": {
+      "path": "src/AnnouncementAPI.Application/AnnouncementAPI.Application.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.EntityFrameworkCore": {
+      "path": "src/AnnouncementAPI.EntityFrameworkCore/AnnouncementAPI.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.MongoDB": {
+      "path": "src/AnnouncementAPI.MongoDB/AnnouncementAPI.MongoDB.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.HttpApi": {
+      "path": "src/AnnouncementAPI.HttpApi/AnnouncementAPI.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.HttpApi.Client": {
+      "path": "src/AnnouncementAPI.HttpApi.Client/AnnouncementAPI.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "AnnouncementAPI.TestBase": {
+      "path": "test/AnnouncementAPI.TestBase/AnnouncementAPI.TestBase.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.EntityFrameworkCore.Tests": {
+      "path": "test/AnnouncementAPI.EntityFrameworkCore.Tests/AnnouncementAPI.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.MongoDB.Tests": {
+      "path": "test/AnnouncementAPI.MongoDB.Tests/AnnouncementAPI.MongoDB.Tests.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.Domain.Tests": {
+      "path": "test/AnnouncementAPI.Domain.Tests/AnnouncementAPI.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.Application.Tests": {
+      "path": "test/AnnouncementAPI.Application.Tests/AnnouncementAPI.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.HttpApi.Host": {
+      "path": "host/AnnouncementAPI.HttpApi.Host/AnnouncementAPI.HttpApi.Host.abppkg",
+      "folder": "host"
+    },
+    "AnnouncementAPI.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/AnnouncementAPI.HttpApi.Client.ConsoleTestApp/AnnouncementAPI.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "AnnouncementAPI.AuthServer": {
+      "path": "host/AnnouncementAPI.AuthServer/AnnouncementAPI.AuthServer.abppkg",
+      "folder": "host"
+    },
+    "AnnouncementAPI.Host.Shared": {
+      "path": "host/AnnouncementAPI.Host.Shared/AnnouncementAPI.Host.Shared.abppkg",
+      "folder": "host"
+    }
+  }
+}
