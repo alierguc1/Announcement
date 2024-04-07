@@ -14,9 +14,10 @@ public class AnnouncementAPIEntityFrameworkCoreModule : AbpModule
     {
         context.Services.AddAbpDbContext<AnnouncementAPIDbContext>(options =>
         {
-                /* Add custom repositories here. Example:
-                 * options.AddRepository<Question, EfCoreQuestionRepository>();
-                 */
+            
+            /* Add custom repositories here. Example:
+             * options.AddRepository<Question, EfCoreQuestionRepository>();
+             */
         });
     }
 }

@@ -8,6 +8,9 @@ using StackExchange.Redis;
 using AnnouncementAPI.Mapping;
 using Volo.Abp.BackgroundWorkers;
 using Volo.Abp.Caching.StackExchangeRedis;
+using AnnouncementAPI.Workers;
+using System.Threading.Tasks;
+using Volo.Abp;
 
 namespace AnnouncementAPI;
 
@@ -21,6 +24,12 @@ namespace AnnouncementAPI;
     )]
 public class AnnouncementAPIApplicationModule : AbpModule
 {
+    public override async Task OnApplicationInitializationAsync(
+        ApplicationInitializationContext context)
+    {
+        await context.AddBackgroundWorkerAsync<AddAnnouchmentWorker>();
+        await context.AddBackgroundWorkerAsync<DeleteOlderDataAnnouchmentWorker>();
+    }
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         var configuration = context.Services.GetConfiguration();

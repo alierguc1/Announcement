@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace AnnouncementAPI.Services
 {
-    public class AnnouncementAppService : AnnouncementAPIAppService, IAnnouchmentAppService
+    public class AnnouchmentAppService : AnnouncementAPIAppService, IAnnouchmentAppService
     {
         private readonly IAnnouncementRepositories _annouchementRepositories;
-        public AnnouncementAppService(IAnnouncementRepositories annouchementRepositories)
+        public AnnouchmentAppService(IAnnouncementRepositories annouchementRepositories)
         {
             _annouchementRepositories = annouchementRepositories;
         }

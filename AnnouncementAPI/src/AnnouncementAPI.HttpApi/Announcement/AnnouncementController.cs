@@ -26,6 +26,8 @@ public class AnnouncementController : AnnouncementAPIController, IAnnouchmentApp
     {
         return _annouchmentAppService.GetAllAnnouchment();
     }
+
+
     [HttpPost]
     [Route("announcements")]
     public Annouchment AddAnnouchement(AddAnnouchment addAnnouchment)

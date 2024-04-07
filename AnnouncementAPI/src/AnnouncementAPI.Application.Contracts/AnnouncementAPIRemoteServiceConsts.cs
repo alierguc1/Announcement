@@ -2,7 +2,7 @@
 
 public class AnnouncementAPIRemoteServiceConsts
 {
-    public const string RemoteServiceName = "AnnouncementAPI";
+    public const string RemoteServiceName = "announcements";
 
-    public const string ModuleName = "announcementAPI";
+    public const string ModuleName = "announcements";
 }
