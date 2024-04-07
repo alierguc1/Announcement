@@ -1,4 +1,4 @@
-﻿using AnnouncementAPI.Announcement.Dto;
+﻿using AnnouncementAPI.Announcements.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,8 +8,8 @@ namespace AnnouncementAPI.Announcement
 {
     internal interface IAnnouncementAppService : IApplicationService
     {
-        List<Announcement> GetAllAnnouchment();
-        Announcement AddAnnouchement(AddAnnouncement @addAnnouchment);
+        List<Announcements.Announcements> GetAllAnnouchment();
+        Announcements.Announcements AddAnnouchement(AddAnnouncement @addAnnouchment);
 
     }
 }

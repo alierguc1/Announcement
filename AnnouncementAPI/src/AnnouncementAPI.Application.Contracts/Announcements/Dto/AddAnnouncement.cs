@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnnouncementAPI.Announcement.Dto
+namespace AnnouncementAPI.Announcements.Dto
 {
     public class AddAnnouncement
     {

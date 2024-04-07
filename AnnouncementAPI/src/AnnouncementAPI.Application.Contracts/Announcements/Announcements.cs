@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnnouncementAPI.Announcement
+namespace AnnouncementAPI.Announcements
 {
-    public class Announcement
+    public class Announcements
     {
         public int Id { get; set; }
         public string Title { get; set; }
