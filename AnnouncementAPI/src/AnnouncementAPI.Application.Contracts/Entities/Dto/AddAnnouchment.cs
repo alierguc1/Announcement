@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnnouncementAPI.Announcements
+namespace AnnouncementAPI.Entities.Dto
 {
-    public class Announcements
+    public class AddAnnouchment
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

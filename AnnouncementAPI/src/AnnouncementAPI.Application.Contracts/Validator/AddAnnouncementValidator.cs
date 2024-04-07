@@ -1,4 +1,4 @@
-﻿using AnnouncementAPI.Announcement.Dto;
+﻿using AnnouncementAPI.Entities.Dto;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AnnouncementAPI.Validator
 {
-    public class AddAnnouncementValidator : AbstractValidator<AddAnnouncement>
+    public class AddAnnouncementValidator : AbstractValidator<AddAnnouchment>
     {
         public AddAnnouncementValidator()
         {

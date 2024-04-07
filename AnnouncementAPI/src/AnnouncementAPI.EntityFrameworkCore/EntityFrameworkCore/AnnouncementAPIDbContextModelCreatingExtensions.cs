@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AnnouncementAPI.Entities;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace AnnouncementAPI.EntityFrameworkCore;
 
@@ -10,24 +12,15 @@ public static class AnnouncementAPIDbContextModelCreatingExtensions
     {
         Check.NotNull(builder, nameof(builder));
 
-        /* Configure all entities here. Example:
-
-        builder.Entity<Question>(b =>
+        builder.Entity<Annouchment>(b =>
         {
-            //Configure table & schema name
-            b.ToTable(AnnouncementAPIDbProperties.DbTablePrefix + "Questions", AnnouncementAPIDbProperties.DbSchema);
-
+            b.ToTable("Annouchments", AnnouncementAPIDbProperties.DbSchema);
             b.ConfigureByConvention();
-
-            //Properties
-            b.Property(q => q.Title).IsRequired().HasMaxLength(QuestionConsts.MaxTitleLength);
-
-            //Relations
-            b.HasMany(question => question.Tags).WithOne().HasForeignKey(qt => qt.QuestionId);
-
-            //Indexes
-            b.HasIndex(q => q.CreationTime);
+            b.Property(q => q.Title).IsRequired().HasMaxLength(100);
+            b.Property(q => q.Content).IsRequired().HasMaxLength(300);
+            b.Property(q => q.CreatedDate).HasDefaultValueSql("getdate()");
+            b.HasKey(x => x.Id);
+            b.Property(b => b.Id).ValueGeneratedOnAdd();
         });
-        */
     }
 }

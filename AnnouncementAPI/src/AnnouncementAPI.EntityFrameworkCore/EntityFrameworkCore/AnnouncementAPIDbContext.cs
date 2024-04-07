@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AnnouncementAPI.Entities;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -16,11 +17,11 @@ public class AnnouncementAPIDbContext : AbpDbContext<AnnouncementAPIDbContext>, 
     {
 
     }
-
+    public DbSet<Annouchment> Annouchments { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
+        AnnouncementAPIDbContextModelCreatingExtensions.ConfigureAnnouncementAPI(builder);
         builder.ConfigureAnnouncementAPI();
     }
 }
