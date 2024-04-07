@@ -19,8 +19,7 @@ namespace AnnouncementAPI.Workers
         public AddAnnouchmentWorker(AbpAsyncTimer timer, IAnnouncementRepositories annouchmentAppService, IServiceScopeFactory serviceScopeFactory) : base(timer, serviceScopeFactory)
         {
             _annouchmentAppService = annouchmentAppService;
-            //Timer.Period = 3600000; //1 Saat
-            Timer.Period = 60000; //1 Saat
+            Timer.Period = 3600000; //1 Saat
         }
 
         protected async override Task DoWorkAsync(PeriodicBackgroundWorkerContext workerContext)

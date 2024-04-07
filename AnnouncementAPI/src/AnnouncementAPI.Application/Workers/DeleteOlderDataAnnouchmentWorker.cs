@@ -20,8 +20,7 @@ namespace AnnouncementAPI.Workers
             IAnnouncementRepositories annouchementRepositories,
             IServiceScopeFactory serviceScopeFactory) : base(timer, serviceScopeFactory)
         {
-            //Timer.Period = 3600000; //1 Saat
-            Timer.Period = 60000; //1 Saat
+            Timer.Period = 86400000; //1 Gün
             _annouchementRepositories = annouchementRepositories;
         }
 
