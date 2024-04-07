@@ -33,7 +33,8 @@ public class AnnouncementAPIApplicationModule : AbpModule
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         var configuration = context.Services.GetConfiguration();
-        var redisConnectionString = ConfigurationOptions.Parse(configuration["Redis:Configuration"]!);
+
+        var redisConnectionString = ConfigurationOptions.Parse(configuration["Redis:Configuration"] ?? "localhost:6379");
         context.Services.AddSingleton<IConnectionMultiplexer>(provider =>
             ConnectionMultiplexer.Connect(redisConnectionString));
 
